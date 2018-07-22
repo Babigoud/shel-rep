@@ -1,0 +1,38 @@
+
+ age=60
+if [ "$age" -et 18 ]  || [  "$age" -et 30  ]
+then
+echo "valid age"
+else
+echo "age not valid"
+fi
+ num1=20
+num2=5
+echo `expr $num1 + $num2`
+echo $(( num1 - num2 ))
+echo $(( num1 * num2 ))
+echo `expr $num1 / $num2`
+num1=20.5
+num2=5
+echo "20.5+5" | bc
+echo "20.5-5" | bc
+echo "scale=2; 20.5/5" | bc
+#case statement
+vehicle=$1
+case $vehicle in
+"car" )
+echo "rent of car" ;;
+"bus" )
+echo "rent of bus" ;;
+* )
+echo "unknown vehicle" ;;
+esac
+#case statement
+echo -e "enter value : \c"
+read value
+case $value in
+[0-9] )
+echo "user enter $value 0 to 9" ;;
+[a-z] )
+echo "user enter $value a to z" ;;
+esac
